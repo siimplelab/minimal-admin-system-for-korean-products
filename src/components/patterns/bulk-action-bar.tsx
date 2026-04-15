@@ -18,7 +18,7 @@ export function BulkActionBar({
   }
 
   return (
-    <div className="mb-3 flex items-center justify-between rounded-md border border-[#bfdbfe] bg-[#eff6ff] px-4 py-3">
+    <div className="mb-3 flex items-center justify-between rounded-md border border-[var(--focus-ring)] bg-[var(--primary-weak)] px-4 py-3">
       <p className="text-[15px] text-[var(--foreground-strong)]">
         {selectedCount}건 선택됨
       </p>

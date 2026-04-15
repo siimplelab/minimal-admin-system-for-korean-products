@@ -27,7 +27,7 @@ export function RadioGroup({
             className="inline-flex cursor-pointer items-center gap-2 text-sm text-[var(--foreground)]"
           >
             <input
-              className="h-4 w-4 border-[var(--border-strong)] text-[var(--foreground-strong)] focus:ring-[var(--focus-ring)]"
+              className="h-4 w-4 border-[var(--border-strong)] text-[var(--primary)] focus:ring-[var(--focus-ring)]"
               type="radio"
               name={name}
               value={option.value}

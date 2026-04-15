@@ -179,10 +179,10 @@ const quickRanges = [
 ];
 
 const chartTooltipStyle = {
-  backgroundColor: "#ffffff",
-  border: "1px solid #e2e8f0",
+  backgroundColor: "var(--surface)",
+  border: "1px solid var(--border)",
   borderRadius: 8,
-  boxShadow: "0 4px 14px rgba(15, 23, 42, 0.08)",
+  boxShadow: "var(--shadow-md)",
   fontSize: 12,
 };
 
@@ -240,7 +240,7 @@ export function DashboardTemplate() {
                 key={range.label}
                 className={
                   range.active
-                    ? "inline-flex items-center gap-1 rounded-md border border-[var(--border)] bg-[var(--surface-muted)] px-2.5 py-1.5 text-[13px] font-semibold text-[var(--foreground-muted)]"
+                    ? "inline-flex items-center gap-1 rounded-md border border-[var(--primary)] bg-[var(--primary-weak)] px-2.5 py-1.5 text-[13px] font-semibold text-[var(--primary-hover)]"
                     : "inline-flex items-center gap-1 rounded-md border border-[var(--border)] bg-white px-2.5 py-1.5 text-[13px] text-[var(--foreground-muted)]"
                 }
               >
@@ -298,14 +298,18 @@ export function DashboardTemplate() {
           <ChartSlot mounted={mounted} heightClassName="h-[290px]">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={trendData} margin={{ left: -20, right: 8 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--chart-grid)" />
                 <XAxis
                   dataKey="date"
-                  tick={{ fontSize: 12, fill: "#64748b" }}
+                  tick={{ fontSize: 12, fill: "var(--chart-axis)" }}
                   axisLine={false}
                   tickLine={false}
                 />
-                <YAxis tick={{ fontSize: 12, fill: "#64748b" }} axisLine={false} tickLine={false} />
+                <YAxis
+                  tick={{ fontSize: 12, fill: "var(--chart-axis)" }}
+                  axisLine={false}
+                  tickLine={false}
+                />
                 <Tooltip contentStyle={chartTooltipStyle} />
                 <Legend wrapperStyle={{ fontSize: 12 }} />
                 <Line type="monotone" dataKey="주문" stroke="var(--chart-primary-2)" strokeWidth={2.2} dot={false} />
@@ -369,14 +373,18 @@ export function DashboardTemplate() {
           <ChartSlot mounted={mounted} heightClassName="h-[280px]">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={channelData} margin={{ left: -20, right: 10 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--chart-grid)" />
                 <XAxis
                   dataKey="channel"
-                  tick={{ fontSize: 12, fill: "#64748b" }}
+                  tick={{ fontSize: 12, fill: "var(--chart-axis)" }}
                   axisLine={false}
                   tickLine={false}
                 />
-                <YAxis tick={{ fontSize: 12, fill: "#64748b" }} axisLine={false} tickLine={false} />
+                <YAxis
+                  tick={{ fontSize: 12, fill: "var(--chart-axis)" }}
+                  axisLine={false}
+                  tickLine={false}
+                />
                 <Tooltip contentStyle={chartTooltipStyle} />
                 <Legend wrapperStyle={{ fontSize: 12 }} />
                 <Bar dataKey="신규" stackId="a" fill="var(--chart-primary-2)" radius={[4, 4, 0, 0]} />
@@ -405,14 +413,18 @@ export function DashboardTemplate() {
                     <stop offset="95%" stopColor="var(--chart-accent)" stopOpacity={0} />
                   </linearGradient>
                 </defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--chart-grid)" />
                 <XAxis
                   dataKey="hour"
-                  tick={{ fontSize: 12, fill: "#64748b" }}
+                  tick={{ fontSize: 12, fill: "var(--chart-axis)" }}
                   axisLine={false}
                   tickLine={false}
                 />
-                <YAxis tick={{ fontSize: 12, fill: "#64748b" }} axisLine={false} tickLine={false} />
+                <YAxis
+                  tick={{ fontSize: 12, fill: "var(--chart-axis)" }}
+                  axisLine={false}
+                  tickLine={false}
+                />
                 <Tooltip contentStyle={chartTooltipStyle} />
                 <Legend wrapperStyle={{ fontSize: 12 }} />
                 <Area
@@ -445,8 +457,11 @@ export function DashboardTemplate() {
           <ChartSlot mounted={mounted} heightClassName="h-[255px]">
             <ResponsiveContainer width="100%" height="100%">
               <RadarChart data={slaRadarData} outerRadius="72%">
-                <PolarGrid stroke="#dbe3ef" />
-                <PolarAngleAxis dataKey="subject" tick={{ fontSize: 11, fill: "#64748b" }} />
+                <PolarGrid stroke="var(--chart-polar-grid)" />
+                <PolarAngleAxis
+                  dataKey="subject"
+                  tick={{ fontSize: 11, fill: "var(--chart-axis)" }}
+                />
                 <Tooltip contentStyle={chartTooltipStyle} />
                 <Radar
                   dataKey="score"

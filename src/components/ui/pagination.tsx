@@ -25,7 +25,7 @@ export function Pagination({
     >
       <button
         type="button"
-        className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-[var(--border)] bg-white text-[var(--foreground)] shadow-[var(--shadow-sm)] disabled:opacity-50"
+        className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-[var(--border)] bg-[var(--surface)] text-[var(--foreground)] shadow-[var(--shadow-sm)] hover:bg-[var(--accent)] disabled:opacity-50"
         onClick={() => onPageChange(page - 1)}
         disabled={page <= 1}
       >
@@ -43,8 +43,8 @@ export function Pagination({
             className={cn(
               "inline-flex h-9 min-w-9 items-center justify-center rounded-md border px-2.5 text-[14px]",
               active
-                ? "border-[var(--foreground-strong)] bg-[var(--foreground-strong)] text-white"
-                : "border-[var(--border)] bg-white text-[var(--foreground)] hover:bg-[var(--surface-muted)]",
+                ? "border-[var(--primary)] bg-[var(--primary)] text-[var(--primary-foreground)]"
+                : "border-[var(--border)] bg-[var(--surface)] text-[var(--foreground)] hover:bg-[var(--accent)]",
             )}
           >
             {item}
@@ -54,7 +54,7 @@ export function Pagination({
 
       <button
         type="button"
-        className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-[var(--border)] bg-white text-[var(--foreground)] shadow-[var(--shadow-sm)] disabled:opacity-50"
+        className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-[var(--border)] bg-[var(--surface)] text-[var(--foreground)] shadow-[var(--shadow-sm)] hover:bg-[var(--accent)] disabled:opacity-50"
         onClick={() => onPageChange(page + 1)}
         disabled={page >= safeTotalPages}
       >

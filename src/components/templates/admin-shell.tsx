@@ -73,11 +73,14 @@ export function AdminShell({ currentPath, children }: AdminShellProps) {
                           className={cn(
                             "flex items-center gap-2 rounded-md border px-3.5 py-2.5 text-[15px] transition-colors",
                             active
-                              ? "border-[var(--foreground-strong)] bg-[var(--foreground-strong)] text-white"
+                              ? "border-[var(--primary)] bg-[var(--primary)] text-[var(--primary-foreground)]"
                               : "border-transparent text-[var(--foreground)] hover:border-[var(--border)] hover:bg-[var(--surface-muted)]",
                           )}
                         >
-                          <Icon size={16} className={active ? "text-white" : "text-[#64748b]"} />
+                          <Icon
+                            size={16}
+                            className={active ? "text-[var(--primary-foreground)]" : "text-[var(--foreground-muted)]"}
+                          />
                           <span>{item.label}</span>
                         </Link>
                       );

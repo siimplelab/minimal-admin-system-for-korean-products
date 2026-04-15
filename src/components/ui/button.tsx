@@ -9,13 +9,14 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-[var(--foreground-strong)] text-white shadow-[var(--shadow-sm)] hover:bg-[#0f172a]",
+          "bg-[var(--primary)] text-[var(--primary-foreground)] shadow-[var(--shadow-sm)] hover:bg-[var(--primary-hover)]",
         secondary:
-          "border-[var(--border)] bg-[var(--surface-muted)] text-[var(--foreground-strong)] hover:bg-[#eef2f7]",
+          "border-[var(--border)] bg-[var(--accent)] text-[var(--accent-foreground)] hover:bg-[var(--accent-hover)]",
         outline:
-          "border-[var(--border-strong)] bg-white text-[var(--foreground-strong)] hover:bg-[var(--surface-muted)]",
-        ghost: "text-[var(--foreground)] hover:bg-[var(--surface-muted)]",
-        destructive: "bg-[#b91c1c] text-white hover:bg-[#991b1b]",
+          "border-[var(--border-strong)] bg-[var(--input-bg)] text-[var(--foreground-strong)] hover:bg-[var(--surface-muted)]",
+        ghost: "text-[var(--foreground)] hover:bg-[var(--accent)]",
+        destructive:
+          "bg-[var(--destructive)] text-[var(--destructive-foreground)] hover:bg-[var(--destructive-hover)]",
       },
       size: {
         sm: "h-9 px-4 text-[14px]",

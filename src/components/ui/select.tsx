@@ -29,7 +29,7 @@ export function Select({
         disabled={disabled}
         value={value}
         onChange={(event) => onChange?.(event.target.value)}
-        className="h-11 w-full appearance-none rounded-md border border-[var(--border-strong)] bg-white px-4 pr-10 text-[15px] text-[var(--foreground)] focus-visible:border-[#94a3b8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] disabled:cursor-not-allowed disabled:opacity-50"
+        className="h-11 w-full appearance-none rounded-md border border-[var(--border-strong)] bg-[var(--input-bg)] px-4 pr-10 text-[15px] text-[var(--foreground)] focus-visible:border-[var(--primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] disabled:cursor-not-allowed disabled:opacity-50"
       >
         {placeholder ? <option value="">{placeholder}</option> : null}
         {options.map((option) => (

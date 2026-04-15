@@ -97,8 +97,8 @@ export function SearchForm({ onSearch, defaultValues }: SearchFormProps) {
                 type="button"
                 className={
                   active
-                    ? "rounded-md border border-[var(--foreground-strong)] bg-[var(--foreground-strong)] px-3 py-1.5 text-[14px] text-white"
-                    : "rounded-md border border-[var(--border)] bg-white px-3 py-1.5 text-[14px] text-[var(--foreground)] hover:bg-[var(--surface-muted)]"
+                    ? "rounded-md border border-[var(--primary)] bg-[var(--primary-weak)] px-3 py-1.5 text-[14px] text-[var(--primary-hover)]"
+                    : "rounded-md border border-[var(--border)] bg-[var(--surface)] px-3 py-1.5 text-[14px] text-[var(--foreground)] hover:bg-[var(--accent)]"
                 }
                 onClick={() =>
                   form.setValue("datePreset", option.value as SearchFormValues["datePreset"])

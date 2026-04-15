@@ -137,7 +137,7 @@ export function UsersTemplate() {
             </button>
             <button
               type="button"
-              className="flex w-full items-center gap-2 rounded px-2.5 py-1.5 text-left text-[#991b1b] hover:bg-[#fef2f2]"
+              className="flex w-full items-center gap-2 rounded px-2.5 py-1.5 text-left text-[var(--destructive)] hover:bg-[var(--destructive-weak)]"
               onClick={() => setConfirmOpen(true)}
             >
               <Trash2 size={14} />

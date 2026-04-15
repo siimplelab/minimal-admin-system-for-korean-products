@@ -26,8 +26,8 @@ export function Checkbox({
       disabled={disabled}
       onClick={() => onCheckedChange?.(!checked)}
       className={cn(
-        "flex h-4 w-4 items-center justify-center rounded-[4px] border border-[var(--border-strong)] bg-white text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] disabled:cursor-not-allowed disabled:opacity-50",
-        checked && "border-[var(--foreground-strong)] bg-[var(--foreground-strong)]",
+        "flex h-4 w-4 items-center justify-center rounded-[4px] border border-[var(--border-strong)] bg-[var(--surface)] text-[var(--primary-foreground)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] disabled:cursor-not-allowed disabled:opacity-50",
+        checked && "border-[var(--primary)] bg-[var(--primary)]",
         className,
       )}
       {...props}

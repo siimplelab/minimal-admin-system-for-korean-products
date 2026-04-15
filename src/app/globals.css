@@ -1,18 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f7fa;
-  --background-elevated: #eef2f7;
+  --background: #f7f9fc;
+  --background-elevated: #edf2f8;
   --surface: #ffffff;
   --surface-muted: #f8fafc;
-  --foreground-strong: #111827;
+  --foreground-strong: #0f172a;
   --foreground: #1e293b;
   --foreground-muted: #64748b;
   --border: #e2e8f0;
   --border-strong: #cbd5e1;
+
   --primary: #1d4ed8;
+  --primary-hover: #1e40af;
+  --primary-foreground: #ffffff;
   --primary-weak: #eff6ff;
+  --accent: #f1f5f9;
+  --accent-hover: #e7eef7;
+  --accent-foreground: #0f172a;
+  --destructive: #b91c1c;
+  --destructive-hover: #991b1b;
+  --destructive-foreground: #ffffff;
+  --destructive-weak: #fef2f2;
+
   --focus-ring: #bfdbfe;
+  --input-bg: #ffffff;
+  --selection: #eaf0ff;
 
   --status-active-fg: #065f46;
   --status-active-bg: #ecfdf5;
@@ -32,6 +45,9 @@
   --chart-warning: #d97706;
   --chart-danger: #dc2626;
   --chart-success: #16a34a;
+  --chart-grid: #e2e8f0;
+  --chart-axis: #64748b;
+  --chart-polar-grid: #dbe4f0;
 
   --radius-sm: 4px;
   --radius-md: 6px;
@@ -40,6 +56,7 @@
 
   --shadow-sm: 0 1px 1px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.06);
   --shadow-md: 0 4px 14px rgba(15, 23, 42, 0.08);
+  --scrollbar-thumb: #cbd5e1;
 }
 
 @theme inline {
@@ -54,6 +71,10 @@
   --color-border-strong: var(--border-strong);
   --color-primary: var(--primary);
   --color-primary-weak: var(--primary-weak);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
 
   --font-sans: var(--font-noto-sans-kr);
   --font-mono: var(--font-jetbrains-mono);
@@ -65,8 +86,8 @@
 
 body {
   background: var(--background);
-  background-image: radial-gradient(circle at 0% 0%, #f8fafc 0, transparent 48%),
-    radial-gradient(circle at 100% 0%, #f1f5f9 0, transparent 40%);
+  background-image: radial-gradient(circle at 0% 0%, var(--surface) 0, transparent 48%),
+    radial-gradient(circle at 100% 0%, var(--background-elevated) 0, transparent 42%);
   color: var(--foreground);
   font-family: var(--font-noto-sans-kr), system-ui, sans-serif;
   font-size: 16px;
@@ -102,7 +123,7 @@ body {
 .kpi-card {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-muted) 100%);
 }
 
 .table-cell-truncate {
@@ -121,7 +142,7 @@ body {
   border: 3px solid transparent;
   border-radius: 10px;
   background-clip: content-box;
-  background-color: #cbd5e1;
+  background-color: var(--scrollbar-thumb);
 }
 
 @keyframes fade-up {
@@ -160,4 +181,18 @@ body {
 
 .soft-pulse {
   animation: soft-pulse 2200ms ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .soft-pulse {
+    animation: none;
+  }
+
+  .motion-card,
+  .motion-card:hover {
+    transform: none;
+    transition: none;
+    box-shadow: var(--shadow-sm);
+  }
 }

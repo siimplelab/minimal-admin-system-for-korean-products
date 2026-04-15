@@ -9,7 +9,7 @@ const badgeVariants = cva(
       variant: {
         neutral:
           "border-[var(--border-strong)] bg-[var(--surface-muted)] text-[var(--foreground)]",
-        primary: "border-[#bfdbfe] bg-[#eff6ff] text-[#1e3a8a]",
+        primary: "border-[var(--focus-ring)] bg-[var(--primary-weak)] text-[var(--primary-hover)]",
         success:
           "border-[var(--status-active-border)] bg-[var(--status-active-bg)] text-[var(--status-active-fg)]",
         warning:

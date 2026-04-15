@@ -58,10 +58,10 @@ export function DataTable<TData>({
       header: "",
       cell: ({ row }) => (
         <details className="relative">
-          <summary className="ml-auto inline-flex h-7 w-7 cursor-pointer list-none items-center justify-center rounded-md border border-[var(--border)] bg-white text-[var(--foreground-muted)] hover:bg-[var(--surface-muted)] [&::-webkit-details-marker]:hidden">
+          <summary className="ml-auto inline-flex h-7 w-7 cursor-pointer list-none items-center justify-center rounded-md border border-[var(--border)] bg-[var(--input-bg)] text-[var(--foreground-muted)] hover:bg-[var(--accent)] [&::-webkit-details-marker]:hidden">
             <MoreHorizontal size={14} />
           </summary>
-          <div className="absolute right-0 z-20 mt-1 min-w-[132px] rounded-md border border-[var(--border)] bg-white p-1 shadow-[var(--shadow-md)]">
+          <div className="absolute right-0 z-20 mt-1 min-w-[132px] rounded-md border border-[var(--border)] bg-[var(--surface)] p-1 shadow-[var(--shadow-md)]">
             {rowActions(row.original)}
           </div>
         </details>
@@ -150,7 +150,7 @@ export function DataTable<TData>({
 
   if (loading) {
     return (
-      <div className="rounded-lg border border-[var(--border)] bg-white p-6 text-center text-sm text-[var(--foreground-muted)]">
+      <div className="rounded-lg border border-[var(--border)] bg-[var(--surface)] p-6 text-center text-sm text-[var(--foreground-muted)]">
         데이터를 불러오는 중입니다...
       </div>
     );
@@ -159,11 +159,14 @@ export function DataTable<TData>({
   const rows = table.getRowModel().rows;
 
   return (
-    <div className="overflow-hidden rounded-lg border border-[var(--border)] bg-white shadow-[var(--shadow-sm)]">
+    <div className="overflow-hidden rounded-lg border border-[var(--border)] bg-[var(--surface)] shadow-[var(--shadow-sm)]">
       <Table className="[&_td]:whitespace-nowrap">
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow key={headerGroup.id} className="hover:bg-transparent">
+            <TableRow
+              key={headerGroup.id}
+              className="!bg-[var(--surface-muted)] hover:!bg-[var(--surface-muted)]"
+            >
               {headerGroup.headers.map((header) => (
                 <TableHead key={header.id}>
                   {header.isPlaceholder
@@ -181,7 +184,7 @@ export function DataTable<TData>({
               <TableRow
                 key={row.id}
                 data-state={row.getIsSelected() ? "selected" : undefined}
-                className={row.getIsSelected() ? "!bg-[#eef2ff]" : undefined}
+                className={row.getIsSelected() ? "!bg-[var(--selection)]" : undefined}
               >
                 {row.getVisibleCells().map((cell) => (
                   <TableCell key={cell.id}>
@@ -200,7 +203,7 @@ export function DataTable<TData>({
         </TableBody>
       </Table>
 
-      <div className="flex flex-wrap items-center justify-between gap-2 border-t border-[var(--border)] bg-[var(--surface-muted)] px-3 py-2">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-t border-[var(--border)] bg-[var(--accent)] px-3 py-2">
         <p className="text-[14px] text-[var(--foreground-muted)]">
           페이지 {page} / {totalPages}
         </p>
