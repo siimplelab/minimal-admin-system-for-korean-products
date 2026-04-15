@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ComponentType } from "react";
-import { BellRing, LayoutGrid, ShoppingBag, Users } from "lucide-react";
+import { BellRing, LayoutGrid, Library, ShoppingBag, Users } from "lucide-react";
 
 import { cn } from "@/lib/cn";
 
@@ -8,7 +8,7 @@ type NavItem = {
   href: string;
   label: string;
   icon: ComponentType<{ size?: number; className?: string }>;
-  group: "운영" | "콘텐츠";
+  group: "운영" | "콘텐츠" | "시스템";
 };
 
 const navItems: NavItem[] = [
@@ -16,6 +16,7 @@ const navItems: NavItem[] = [
   { href: "/users", label: "사용자 관리", icon: Users, group: "운영" },
   { href: "/orders", label: "주문/예약 관리", icon: ShoppingBag, group: "운영" },
   { href: "/notices", label: "공지 관리", icon: BellRing, group: "콘텐츠" },
+  { href: "/design-system", label: "디자인 시스템", icon: Library, group: "시스템" },
 ];
 
 type AdminShellProps = {
@@ -24,7 +25,7 @@ type AdminShellProps = {
 };
 
 export function AdminShell({ currentPath, children }: AdminShellProps) {
-  const groups = ["운영", "콘텐츠"] as const;
+  const groups = ["운영", "콘텐츠", "시스템"] as const;
 
   return (
     <div className="min-h-screen bg-[var(--background)]">

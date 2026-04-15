@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import {
   AdminShell,
   DashboardTemplate,
+  DesignSystemTemplate,
   NoticesTemplate,
   OrdersTemplate,
   UsersTemplate,
@@ -46,6 +47,14 @@ export const Notices: Story = {
   render: () => (
     <AdminShell currentPath="/notices">
       <NoticesTemplate />
+    </AdminShell>
+  ),
+};
+
+export const DesignSystem: Story = {
+  render: () => (
+    <AdminShell currentPath="/design-system">
+      <DesignSystemTemplate />
     </AdminShell>
   ),
 };
