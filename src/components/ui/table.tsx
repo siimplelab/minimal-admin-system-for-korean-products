@@ -6,7 +6,7 @@ export function Table({ className, ...props }: React.ComponentProps<"table">) {
   return (
     <div className="w-full overflow-auto">
       <table
-        className={cn("w-full caption-bottom border-collapse text-[13px]", className)}
+        className={cn("w-full caption-bottom border-collapse text-[14px]", className)}
         {...props}
       />
     </div>
@@ -51,7 +51,7 @@ export function TableHead({ className, ...props }: React.ComponentProps<"th">) {
   return (
     <th
       className={cn(
-        "h-9 px-3 text-left align-middle text-[12px] font-semibold tracking-tight text-[var(--foreground-muted)]",
+        "h-11 px-4 text-left align-middle text-[13px] font-semibold tracking-tight text-[var(--foreground-muted)]",
         className,
       )}
       {...props}
@@ -62,7 +62,7 @@ export function TableHead({ className, ...props }: React.ComponentProps<"th">) {
 export function TableCell({ className, ...props }: React.ComponentProps<"td">) {
   return (
     <td
-      className={cn("h-9 px-3 align-middle text-[13px] text-[var(--foreground)]", className)}
+      className={cn("h-11 px-4 align-middle text-[14px] text-[var(--foreground)]", className)}
       {...props}
     />
   );

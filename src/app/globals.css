@@ -69,21 +69,21 @@ body {
     radial-gradient(circle at 100% 0%, #f1f5f9 0, transparent 40%);
   color: var(--foreground);
   font-family: var(--font-noto-sans-kr), system-ui, sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.62;
 }
 
 .admin-container {
   margin-inline: auto;
   width: 100%;
   max-width: 1440px;
-  padding-inline: 20px;
+  padding-inline: 28px;
 }
 
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  border-radius: 10px;
   box-shadow: var(--shadow-sm);
 }
 

@@ -201,7 +201,7 @@ export function DataTable<TData>({
       </Table>
 
       <div className="flex flex-wrap items-center justify-between gap-2 border-t border-[var(--border)] bg-[var(--surface-muted)] px-3 py-2">
-        <p className="text-[12px] text-[var(--foreground-muted)]">
+        <p className="text-[14px] text-[var(--foreground-muted)]">
           페이지 {page} / {totalPages}
         </p>
         <Pagination page={page} totalPages={totalPages} onPageChange={setPage} />

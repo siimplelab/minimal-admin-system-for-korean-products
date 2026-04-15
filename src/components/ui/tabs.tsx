@@ -44,7 +44,7 @@ export function TabsList({
   return (
     <div
       className={cn(
-        "inline-flex h-9 items-center gap-1 rounded-md border border-[var(--border)] bg-white p-1 shadow-[var(--shadow-sm)]",
+        "inline-flex h-10 items-center gap-1 rounded-md border border-[var(--border)] bg-white p-1.5 shadow-[var(--shadow-sm)]",
         className,
       )}
       {...props}
@@ -69,7 +69,7 @@ export function TabsTrigger({
     <button
       type="button"
       className={cn(
-        "rounded-sm px-3 py-1 text-[13px] text-[var(--foreground-muted)] transition-colors",
+        "rounded-sm px-3.5 py-1.5 text-[14px] text-[var(--foreground-muted)] transition-colors",
         active &&
           "border border-[var(--border)] bg-[var(--surface-muted)] text-[var(--foreground-strong)]",
         className,

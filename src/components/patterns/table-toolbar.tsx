@@ -18,8 +18,8 @@ export function TableToolbar({
   actions,
 }: TableToolbarProps) {
   return (
-    <div className="mb-2 flex flex-wrap items-center justify-between gap-2 rounded-md border border-[var(--border)] bg-white px-3 py-2">
-      <div className="text-sm text-[var(--foreground-muted)]">
+    <div className="mb-3 flex flex-wrap items-center justify-between gap-3 rounded-md border border-[var(--border)] bg-white px-4 py-3">
+      <div className="text-[15px] text-[var(--foreground-muted)]">
         총 <span className="font-semibold text-[var(--foreground-strong)]">{totalCount}</span>
         건
         {selectedCount > 0 ? (

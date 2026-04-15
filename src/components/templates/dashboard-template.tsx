@@ -215,8 +215,8 @@ export function DashboardTemplate() {
   }, []);
 
   return (
-    <div className="space-y-4">
-      <section className="card motion-card animate-fade-up p-4">
+    <div className="space-y-5">
+      <section className="card motion-card animate-fade-up p-5">
         <SectionHeader
           icon={<Gauge size={14} />}
           title="운영 현황"
@@ -231,7 +231,7 @@ export function DashboardTemplate() {
           }
         />
 
-        <div className="mb-3 flex flex-wrap items-center gap-2">
+        <div className="mb-4 flex flex-wrap items-center gap-2.5">
           {quickRanges.map((range) => {
             const Icon = range.icon;
 
@@ -240,8 +240,8 @@ export function DashboardTemplate() {
                 key={range.label}
                 className={
                   range.active
-                    ? "inline-flex items-center gap-1 rounded-md border border-[var(--border)] bg-[var(--surface-muted)] px-2 py-1 text-[11px] font-semibold text-[var(--foreground-muted)]"
-                    : "inline-flex items-center gap-1 rounded-md border border-[var(--border)] bg-white px-2 py-1 text-[11px] text-[var(--foreground-muted)]"
+                    ? "inline-flex items-center gap-1 rounded-md border border-[var(--border)] bg-[var(--surface-muted)] px-2.5 py-1.5 text-[13px] font-semibold text-[var(--foreground-muted)]"
+                    : "inline-flex items-center gap-1 rounded-md border border-[var(--border)] bg-white px-2.5 py-1.5 text-[13px] text-[var(--foreground-muted)]"
                 }
               >
                 <Icon size={12} />
@@ -251,7 +251,7 @@ export function DashboardTemplate() {
           })}
         </div>
 
-        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {metrics.map((item, index) => {
             const Icon = item.icon;
 
@@ -261,14 +261,14 @@ export function DashboardTemplate() {
                 className="kpi-card motion-card animate-fade-up p-3"
                 style={{ animationDelay: `${80 + index * 70}ms` }}
               >
-                <p className="inline-flex items-center gap-1.5 text-[12px] text-[var(--foreground-muted)]">
+                <p className="inline-flex items-center gap-1.5 text-[14px] text-[var(--foreground-muted)]">
                   <Icon size={13} className="text-[var(--primary)]" />
                   {item.label}
                 </p>
                 <p className="mt-1 text-[26px] font-semibold leading-none text-[var(--foreground-strong)]">
                   {item.value}
                 </p>
-                <p className="mt-2 text-[12px] text-[var(--foreground-muted)]">전주 대비 {item.delta}</p>
+                <p className="mt-2 text-[14px] text-[var(--foreground-muted)]">전주 대비 {item.delta}</p>
                 <div className="mt-2 grid grid-cols-7 gap-1">
                   {item.trend.map((point, pointIndex) => (
                     <div
@@ -288,8 +288,8 @@ export function DashboardTemplate() {
         </div>
       </section>
 
-      <div className="grid gap-4 xl:grid-cols-[1.8fr_1fr]">
-        <section className="card motion-card animate-fade-up p-4" style={{ animationDelay: "120ms" }}>
+      <div className="grid gap-5 xl:grid-cols-[1.8fr_1fr]">
+        <section className="card motion-card animate-fade-up p-5" style={{ animationDelay: "120ms" }}>
           <SectionHeader
             icon={<ReceiptText size={14} />}
             title="주간 주문/결제 추이"
@@ -316,7 +316,7 @@ export function DashboardTemplate() {
           </ChartSlot>
         </section>
 
-        <section className="card motion-card animate-fade-up p-4" style={{ animationDelay: "170ms" }}>
+        <section className="card motion-card animate-fade-up p-5" style={{ animationDelay: "170ms" }}>
           <SectionHeader
             icon={<ShieldCheck size={14} />}
             title="계정 상태 분포"
@@ -350,17 +350,17 @@ export function DashboardTemplate() {
               >
                 <div className="flex items-center gap-2">
                   <span className="inline-block h-2.5 w-2.5 rounded-full" style={{ background: item.color }} />
-                  <span className="text-[13px] text-[var(--foreground)]">{item.name}</span>
+                  <span className="text-[15px] text-[var(--foreground)]">{item.name}</span>
                 </div>
-                <span className="text-[13px] font-semibold text-[var(--foreground-strong)]">{item.value}%</span>
+                <span className="text-[15px] font-semibold text-[var(--foreground-strong)]">{item.value}%</span>
               </li>
             ))}
           </ul>
         </section>
       </div>
 
-      <div className="grid gap-4 xl:grid-cols-2">
-        <section className="card motion-card animate-fade-up p-4" style={{ animationDelay: "220ms" }}>
+      <div className="grid gap-5 xl:grid-cols-2">
+        <section className="card motion-card animate-fade-up p-5" style={{ animationDelay: "220ms" }}>
           <SectionHeader
             icon={<BarChart3 size={14} />}
             title="채널별 주문 구성"
@@ -386,7 +386,7 @@ export function DashboardTemplate() {
           </ChartSlot>
         </section>
 
-        <section className="card motion-card animate-fade-up p-4" style={{ animationDelay: "270ms" }}>
+        <section className="card motion-card animate-fade-up p-5" style={{ animationDelay: "270ms" }}>
           <SectionHeader
             icon={<MessageSquareMore size={14} />}
             title="시간대 문의/처리량"
@@ -435,8 +435,8 @@ export function DashboardTemplate() {
         </section>
       </div>
 
-      <div className="grid gap-4 xl:grid-cols-[1.05fr_1.2fr_1fr]">
-        <section className="card motion-card animate-fade-up p-4" style={{ animationDelay: "320ms" }}>
+      <div className="grid gap-5 xl:grid-cols-[1.05fr_1.2fr_1fr]">
+        <section className="card motion-card animate-fade-up p-5" style={{ animationDelay: "320ms" }}>
           <SectionHeader
             icon={<Gauge size={14} />}
             title="팀별 SLA 달성률"
@@ -459,7 +459,7 @@ export function DashboardTemplate() {
           </ChartSlot>
         </section>
 
-        <section className="card motion-card animate-fade-up p-4" style={{ animationDelay: "370ms" }}>
+        <section className="card motion-card animate-fade-up p-5" style={{ animationDelay: "370ms" }}>
           <SectionHeader
             icon={<FolderKanban size={14} />}
             title="운영 이슈"
@@ -469,19 +469,19 @@ export function DashboardTemplate() {
             {incidents.map((incident) => (
               <li
                 key={incident.title}
-                className="rounded-md border border-[var(--border)] bg-white px-3 py-2 transition-colors hover:bg-[var(--surface-muted)]"
+                className="rounded-md border border-[var(--border)] bg-white px-4 py-3 transition-colors hover:bg-[var(--surface-muted)]"
               >
                 <div className="flex items-start justify-between gap-2">
                   <div>
-                    <p className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[var(--foreground-strong)]">
+                    <p className="inline-flex items-center gap-1.5 text-[15px] font-medium text-[var(--foreground-strong)]">
                       <ReceiptText size={13} className="text-[var(--foreground-muted)]" />
                       {incident.title}
                     </p>
-                    <p className="mt-1 text-[12px] text-[var(--foreground-muted)]">담당: {incident.owner}</p>
+                    <p className="mt-1 text-[14px] text-[var(--foreground-muted)]">담당: {incident.owner}</p>
                   </div>
                   <StatusBadge status={incident.status} />
                 </div>
-                <p className="mt-2 inline-flex items-center gap-1 text-[11px] text-[var(--foreground-muted)]">
+                <p className="mt-2 inline-flex items-center gap-1 text-[13px] text-[var(--foreground-muted)]">
                   <AlarmClock size={12} />
                   마감 목표: {incident.due}
                 </p>
@@ -490,7 +490,7 @@ export function DashboardTemplate() {
           </ul>
         </section>
 
-        <section className="card motion-card animate-fade-up p-4" style={{ animationDelay: "420ms" }}>
+        <section className="card motion-card animate-fade-up p-5" style={{ animationDelay: "420ms" }}>
           <SectionHeader
             icon={<Megaphone size={14} />}
             title="운영 노트"
@@ -506,7 +506,7 @@ export function DashboardTemplate() {
               {checkList.map((item) => (
                 <div
                   key={item}
-                  className="panel-inset inline-flex w-full items-start gap-2 px-3 py-2 text-[13px] text-[var(--foreground)]"
+                  className="panel-inset inline-flex w-full items-start gap-2.5 px-4 py-3 text-[15px] text-[var(--foreground)]"
                 >
                   <CheckCircle2 size={14} className="mt-0.5 text-[var(--chart-accent)]" />
                   <span>{item}</span>
@@ -516,12 +516,12 @@ export function DashboardTemplate() {
 
             <TabsContent value="notice" className="space-y-2 pt-2">
               {latestNotices.map((notice) => (
-                <div key={notice.title} className="rounded-md border border-[var(--border)] px-3 py-2">
-                  <p className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[var(--foreground-strong)]">
+                <div key={notice.title} className="rounded-md border border-[var(--border)] px-4 py-3">
+                  <p className="inline-flex items-center gap-1.5 text-[15px] font-medium text-[var(--foreground-strong)]">
                     <Megaphone size={13} className="text-[var(--primary)]" />
                     {notice.title}
                   </p>
-                  <p className="mt-1 text-[12px] text-[var(--foreground-muted)]">
+                  <p className="mt-1 text-[14px] text-[var(--foreground-muted)]">
                     {notice.category} · {notice.updatedAt}
                   </p>
                 </div>

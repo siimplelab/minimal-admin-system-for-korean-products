@@ -41,14 +41,14 @@ export function NoticesTemplate() {
   );
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-4">
       <PageHeader
         title="공지 관리"
         description="운영 공지를 작성하고 게시 상태를 제어합니다."
         actions={<Button>등록</Button>}
       />
 
-      <section className="panel-inset px-3 py-2 text-[13px] text-[var(--foreground)]">
+      <section className="panel-inset px-4 py-3 text-[15px] text-[var(--foreground)]">
         게시 전 검수, 게시 후 노출 확인, 만료 공지 아카이브까지 한 화면에서 관리하도록 설계되었습니다.
       </section>
 
@@ -65,7 +65,7 @@ export function NoticesTemplate() {
             rowActions={() => (
               <button
                 type="button"
-                className="flex w-full items-center gap-2 rounded px-2 py-1 text-sm hover:bg-[var(--surface-muted)]"
+                className="flex w-full items-center gap-2 rounded px-2.5 py-1.5 text-[15px] hover:bg-[var(--surface-muted)]"
               >
                 <Pencil size={14} />
                 수정
@@ -75,12 +75,12 @@ export function NoticesTemplate() {
         </TabsContent>
 
         <TabsContent value="edit" className="mt-3">
-          <section className="card p-4">
+          <section className="card p-5">
             <SectionHeader
               title="공지 편집"
               description="백오피스 운영자가 실제로 사용하는 밀도 높은 폼 예시"
             />
-            <div className="space-y-3">
+            <div className="space-y-4">
               <FormRow label="제목" required>
                 <Input placeholder="공지 제목을 입력하세요" />
               </FormRow>
@@ -91,7 +91,7 @@ export function NoticesTemplate() {
                 <Textarea placeholder="운영 공지 내용을 입력하세요" />
               </FormRow>
             </div>
-            <div className="mt-4 flex justify-end gap-2 border-t border-[var(--border)] pt-3">
+            <div className="mt-5 flex justify-end gap-2.5 border-t border-[var(--border)] pt-4">
               <Button variant="outline">취소</Button>
               <Button>저장</Button>
             </div>

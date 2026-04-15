@@ -86,8 +86,8 @@ export function SearchForm({ onSearch, defaultValues }: SearchFormProps) {
           </FormRow>
         </div>
 
-        <div className="lg:col-span-12 flex flex-wrap items-center gap-2 border-t border-[var(--border)] pt-3">
-          <p className="text-[12px] font-medium text-[var(--foreground-muted)]">빠른 기간:</p>
+        <div className="lg:col-span-12 flex flex-wrap items-center gap-2.5 border-t border-[var(--border)] pt-4">
+          <p className="text-[14px] font-medium text-[var(--foreground-muted)]">빠른 기간:</p>
           {dateOptions.map((option) => {
             const active = option.value === datePresetValue;
 
@@ -97,8 +97,8 @@ export function SearchForm({ onSearch, defaultValues }: SearchFormProps) {
                 type="button"
                 className={
                   active
-                    ? "rounded-md border border-[var(--foreground-strong)] bg-[var(--foreground-strong)] px-2.5 py-1 text-[12px] text-white"
-                    : "rounded-md border border-[var(--border)] bg-white px-2.5 py-1 text-[12px] text-[var(--foreground)] hover:bg-[var(--surface-muted)]"
+                    ? "rounded-md border border-[var(--foreground-strong)] bg-[var(--foreground-strong)] px-3 py-1.5 text-[14px] text-white"
+                    : "rounded-md border border-[var(--border)] bg-white px-3 py-1.5 text-[14px] text-[var(--foreground)] hover:bg-[var(--surface-muted)]"
                 }
                 onClick={() =>
                   form.setValue("datePreset", option.value as SearchFormValues["datePreset"])
@@ -110,7 +110,7 @@ export function SearchForm({ onSearch, defaultValues }: SearchFormProps) {
           })}
         </div>
 
-        <div className="lg:col-span-12 flex justify-end gap-2 border-t border-[var(--border)] pt-3">
+        <div className="lg:col-span-12 flex justify-end gap-2.5 border-t border-[var(--border)] pt-4">
           <Button
             type="button"
             variant="ghost"

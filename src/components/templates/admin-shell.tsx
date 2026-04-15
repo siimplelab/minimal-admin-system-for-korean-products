@@ -30,25 +30,25 @@ export function AdminShell({ currentPath, children }: AdminShellProps) {
   return (
     <div className="min-h-screen bg-[var(--background)]">
       <header className="border-b border-[var(--border)] bg-white/90 backdrop-blur">
-        <div className="admin-container flex h-12 items-center justify-between">
+        <div className="admin-container flex h-14 items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-[var(--foreground-strong)] text-[11px] font-semibold text-white">
+            <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-[var(--foreground-strong)] text-[12px] font-semibold text-white">
               MA
             </span>
-            <div className="text-sm font-semibold tracking-tight text-[var(--foreground-strong)]">
+            <div className="text-[16px] font-semibold tracking-tight text-[var(--foreground-strong)]">
               Minimal Admin System
             </div>
           </div>
-          <div className="inline-flex items-center rounded-md border border-[var(--border)] bg-[var(--surface-muted)] px-2 py-1 text-[12px] text-[var(--foreground-muted)]">
+          <div className="inline-flex items-center rounded-md border border-[var(--border)] bg-[var(--surface-muted)] px-3 py-1.5 text-[13px] text-[var(--foreground-muted)]">
             KR Ops Backoffice
           </div>
         </div>
       </header>
 
-      <div className="admin-container grid gap-4 py-4 md:grid-cols-[240px_1fr]">
-        <aside className="card sticky top-4 h-fit p-3">
+      <div className="admin-container grid gap-5 py-5 md:grid-cols-[260px_1fr]">
+        <aside className="card sticky top-5 h-fit p-4">
           <div className="mb-3 border-b border-[var(--border)] pb-3">
-            <p className="text-[12px] font-semibold uppercase tracking-wide text-[var(--foreground-muted)]">
+            <p className="text-[13px] font-semibold uppercase tracking-wide text-[var(--foreground-muted)]">
               Navigation
             </p>
           </div>
@@ -56,7 +56,7 @@ export function AdminShell({ currentPath, children }: AdminShellProps) {
           <nav className="space-y-3">
             {groups.map((group) => (
               <div key={group}>
-                <p className="mb-1 px-2 text-[11px] font-semibold uppercase tracking-wide text-[var(--foreground-muted)]">
+                <p className="mb-1.5 px-2 text-[12px] font-semibold uppercase tracking-wide text-[var(--foreground-muted)]">
                   {group}
                 </p>
                 <div className="space-y-1">
@@ -71,13 +71,13 @@ export function AdminShell({ currentPath, children }: AdminShellProps) {
                           key={item.href}
                           href={item.href}
                           className={cn(
-                            "flex items-center gap-2 rounded-md border px-3 py-2 text-[13px] transition-colors",
+                            "flex items-center gap-2 rounded-md border px-3.5 py-2.5 text-[15px] transition-colors",
                             active
                               ? "border-[var(--foreground-strong)] bg-[var(--foreground-strong)] text-white"
                               : "border-transparent text-[var(--foreground)] hover:border-[var(--border)] hover:bg-[var(--surface-muted)]",
                           )}
                         >
-                          <Icon size={15} className={active ? "text-white" : "text-[#64748b]"} />
+                          <Icon size={16} className={active ? "text-white" : "text-[#64748b]"} />
                           <span>{item.label}</span>
                         </Link>
                       );

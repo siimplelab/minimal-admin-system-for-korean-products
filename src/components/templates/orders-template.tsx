@@ -43,26 +43,26 @@ export function OrdersTemplate() {
   );
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-4">
       <PageHeader
         title="주문/예약 관리"
         description="주문 상태, 결제 정보, 예약 처리 흐름을 운영합니다."
         actions={<Button>다운로드</Button>}
       />
 
-      <section className="grid gap-2 sm:grid-cols-3">
-        <article className="panel-inset px-3 py-2">
-          <p className="text-[12px] text-[var(--foreground-muted)]">총 주문 건수</p>
+      <section className="grid gap-3 sm:grid-cols-3">
+        <article className="panel-inset px-4 py-3">
+          <p className="text-[14px] text-[var(--foreground-muted)]">총 주문 건수</p>
           <p className="mt-1 text-lg font-semibold text-[var(--foreground-strong)]">
             {orderRows.length}건
           </p>
         </article>
-        <article className="panel-inset px-3 py-2">
-          <p className="text-[12px] text-[var(--foreground-muted)]">오늘 주문</p>
+        <article className="panel-inset px-4 py-3">
+          <p className="text-[14px] text-[var(--foreground-muted)]">오늘 주문</p>
           <p className="mt-1 text-lg font-semibold text-[var(--foreground-strong)]">1건</p>
         </article>
-        <article className="panel-inset px-3 py-2">
-          <p className="text-[12px] text-[var(--foreground-muted)]">승인 대기</p>
+        <article className="panel-inset px-4 py-3">
+          <p className="text-[14px] text-[var(--foreground-muted)]">승인 대기</p>
           <p className="mt-1 text-lg font-semibold text-[var(--foreground-strong)]">
             {orderRows.filter((row) => row.상태 === "대기").length}건
           </p>
@@ -83,16 +83,16 @@ export function OrdersTemplate() {
         data={orderRows}
         onSelectionChange={setSelectedRows}
         rowActions={() => (
-          <div className="space-y-0.5 text-sm">
+          <div className="space-y-1 text-[15px]">
             <button
               type="button"
-              className="block w-full rounded px-2 py-1 text-left text-[13px] hover:bg-[var(--surface-muted)]"
+              className="block w-full rounded px-2.5 py-1.5 text-left text-[15px] hover:bg-[var(--surface-muted)]"
             >
               주문 상세
             </button>
             <button
               type="button"
-              className="block w-full rounded px-2 py-1 text-left text-[13px] hover:bg-[var(--surface-muted)]"
+              className="block w-full rounded px-2.5 py-1.5 text-left text-[15px] hover:bg-[var(--surface-muted)]"
             >
               승인 처리
             </button>
