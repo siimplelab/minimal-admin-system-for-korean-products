@@ -1,0 +1,110 @@
+export const designTokens = {
+  color: {
+    neutral: {
+      0: "#ffffff",
+      50: "#f9fafb",
+      100: "#f3f4f6",
+      200: "#e5e7eb",
+      300: "#d1d5db",
+      400: "#9ca3af",
+      500: "#6b7280",
+      600: "#4b5563",
+      700: "#374151",
+      800: "#1f2937",
+      900: "#111827",
+    },
+    primary: {
+      50: "#f0f6ff",
+      100: "#dceafe",
+      500: "#3b82f6",
+      700: "#1d4ed8",
+    },
+  },
+  semantic: {
+    background: "#f9fafb",
+    surface: "#ffffff",
+    surfaceMuted: "#f3f4f6",
+    textStrong: "#111827",
+    text: "#1f2937",
+    textMuted: "#6b7280",
+    border: "#e5e7eb",
+    borderStrong: "#d1d5db",
+    focusRing: "#93c5fd",
+    status: {
+      active: {
+        fg: "#166534",
+        bg: "#f0fdf4",
+        border: "#bbf7d0",
+      },
+      pending: {
+        fg: "#92400e",
+        bg: "#fffbeb",
+        border: "#fde68a",
+      },
+      stopped: {
+        fg: "#991b1b",
+        bg: "#fef2f2",
+        border: "#fecaca",
+      },
+      info: {
+        fg: "#1e3a8a",
+        bg: "#eff6ff",
+        border: "#bfdbfe",
+      },
+    },
+  },
+  typography: {
+    fontFamily: {
+      sans: "Noto Sans KR, system-ui, sans-serif",
+      mono: "JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace",
+    },
+    size: {
+      xs: "12px",
+      sm: "13px",
+      base: "14px",
+      md: "16px",
+      lg: "18px",
+      xl: "20px",
+      "2xl": "24px",
+    },
+    lineHeight: {
+      tight: 1.3,
+      normal: 1.5,
+      loose: 1.7,
+    },
+    weight: {
+      regular: 400,
+      medium: 500,
+      semibold: 600,
+      bold: 700,
+    },
+  },
+  spacing: {
+    0: "0px",
+    1: "4px",
+    2: "8px",
+    3: "12px",
+    4: "16px",
+    5: "20px",
+    6: "24px",
+    8: "32px",
+    10: "40px",
+    12: "48px",
+  },
+  radius: {
+    none: "0px",
+    sm: "4px",
+    md: "6px",
+    lg: "8px",
+    xl: "12px",
+    pill: "9999px",
+  },
+  shadow: {
+    none: "none",
+    sm: "0 1px 2px rgba(17, 24, 39, 0.06)",
+    md: "0 2px 8px rgba(17, 24, 39, 0.08)",
+    lg: "0 6px 20px rgba(17, 24, 39, 0.1)",
+  },
+} as const;
+
+export type DesignTokens = typeof designTokens;
