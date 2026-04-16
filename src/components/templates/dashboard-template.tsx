@@ -109,9 +109,9 @@ const inquiryByHour = [
 ];
 
 const statusDistribution = [
-  { name: "사용중", value: 72, color: "var(--chart-success)" },
-  { name: "대기", value: 18, color: "var(--chart-warning)" },
-  { name: "중지", value: 10, color: "var(--chart-danger)" },
+  { name: "사용중", value: 72, color: "var(--chart-primary-1)" },
+  { name: "대기", value: 18, color: "var(--chart-primary-2)" },
+  { name: "중지", value: 10, color: "var(--chart-primary-4)" },
 ];
 
 const slaRadarData = [
